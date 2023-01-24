@@ -10,9 +10,9 @@ pipeline {
         stage('Build and Push') {
             steps {
                  withCredentials([usernamePassword(credentialsId: 'Docker-hub', passwordVariable: 'pass', usernameVariable: 'user')]) {
-                   sh "docker build -t Huseyndot/exampython:v$BUILD_ID ."
+                   sh "docker build -t Huseyndot/exam10:v$BUILD_ID ."
                    sh "docker login -u $user -p $pass"
-                   sh "docker push Huseyndot/exampython:v$BUILD_ID"
+                   sh "docker push Huseyndot/exam10:v$BUILD_ID"
                 }
             }
         }
