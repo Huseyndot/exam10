@@ -1,5 +1,5 @@
 - name: install docker and start service
-  hosts: servers
+  hosts: all
   tasks:
   - name: install packages (yum utils)
     yum:
