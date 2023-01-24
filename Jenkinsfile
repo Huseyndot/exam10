@@ -3,7 +3,7 @@ pipeline {
     environment { 
      ANSIBLE_PRIVATE_KEY=credentials('ssh-key')
     } 
-    triggergs { 
+    triggers { 
      pollSCM '* * * * *' 
     } 
     stages { 
